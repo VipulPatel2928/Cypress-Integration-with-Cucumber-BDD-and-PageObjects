@@ -33,6 +33,19 @@ export default class ContactPageActions{
         cy.url().should('contain','https://www.techivp.com/contact')
     }
 
+    openURL2(){
+        console.log("Pageobject called")
+        cy.visit('https://www.techivp.com/contact')
+    }
+
+    verifyPagetitle2(){
+        cy.title().should('eq','Contact - TechiVP')
+    }
+
+    verifyPagecurrentURL2(){
+        cy.url().should('contain','https://www.techivp.com/contact')
+    }
+
     SelectInqueryFor(option){
         contactelements.eleInqueryFor().select(option).should('have.value',option)
     }
