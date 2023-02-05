@@ -1,0 +1,41 @@
+{
+  "name": "cypresspractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e": "cypress open",
+    "vp": "cypress run --headed --browser chrome",
+    "vp1": "cypress run --headed --browser chrome --spec \"cypress\\e2e\\Vp Test Folder\\Test1.cy.js\"",
+    "TestRetries": "cypress run --headed --browser chrome --spec \"cypress\\e2e\\CypressLearningElements\\TestRetries.cy.js\"",
+    "POM": "cypress run --headed --browser chrome --spec \"C:cypress/e2e/POMTests/*.cy.js\"",
+    "mergeReports": "mochawesome-merge cypress/report/*.json>mochawesome.json",
+    "generateReport": "marge mochawesome.json",
+    "Runwithall": "npm run POM && npm run mergeReports && npm run generateReport"
+  },
+  "author": "Vipul",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "cypress": "^10.1.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^2.0.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.3",
+    "@popperjs/core": "^2.11.5",
+    "cypress-downloadfile": "^1.2.3",
+    "cypress-multi-reporters": "^1.6.2",
+    "cypress-real-events": "^1.7.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/BDD/**/*.{js,ts}"
+  }
+}
