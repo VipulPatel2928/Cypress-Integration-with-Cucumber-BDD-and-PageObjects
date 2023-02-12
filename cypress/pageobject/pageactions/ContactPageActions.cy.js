@@ -26,7 +26,7 @@ export default class ContactPageActions{
     }
 
     verifyPagetitle1(){
-        cy.title().should('eq','Contact - TechiVP1')
+        cy.title().should('eq','Contact - TechiVP')
     }
 
     verifyPagecurrentURL1(){

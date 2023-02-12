@@ -40,10 +40,3 @@ module.exports = async (on, config) => {
   )
   return config
 }
-module.exports = (on, config) => {
-  // https://github.com/RSMuthu/cypress-cucumber-tagging
-  require('cypress-cucumber-tagging/src/plugin')(config)
-  // make sure to return the config object
-  // as it might have been modified by the plugin
-  return config
-}
